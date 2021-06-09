@@ -1,0 +1,35 @@
+*{
+
+}
+
+
+.style{
+    background-color: darkslategray;
+    font-weight: bolder;
+    font-family: "Dubai Medium";
+}
+#users-table{
+    margin-left: 450px;
+    border: black 15px solid;
+    background: darkslategray;
+
+}
+.title{
+    background-color: black;
+    color: darkslategray;
+}
+.titulo{
+    margin-left: 350px;
+    width: 60%;
+    font-size: 70px;
+    background-color: darkslategray;
+}
+.container{
+    background-color: darkslategray;
+}
+
+.alt{
+    width: 100%;
+    height: 300px;
+    background-color: darkslategray;
+}

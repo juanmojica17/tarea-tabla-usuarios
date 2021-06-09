@@ -1,3 +1,4 @@
+let table = document.querySelector("#users-table tbody");
 const users = [
     {
         name: 'Erik',
@@ -51,56 +52,43 @@ const users = [
     },
 ]
 
-  let correctemail = [];
+ function createtable(userslist){
 
-for(let i = 0; i< users.length; i++){
+for(let i = 0; i< userslist.length; i++){
 
-    if(users[i].email.lastIndexOf("@academlo.com")>0){
-        correctemail.push(users[i]);
-       // console.log(correctemail);
-}}console.log(correctemail);
+    if(userslist[i].email.indexOf("@academlo.com")>0){
+        table.innerHTML += `<tr>
+                <td>${userslist[i].name}</td>
+                <td>${userslist[i].email}</td>
+                <td>${userslist[i].age}</td>
+                <td>${userslist[i].gender}</td>
+                
+                </tr>`;
 
+        for(let index = 0; index < userslist[i].social.length; index++){
+        table.innerHTML +=`<tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>${userslist[i].social[index].url}</td></tr>`
 
-let nombre1 = document.getElementById("1.1");
-edad1 = document.getElementById("1.2");
-email1 = document.getElementById("1.3");
-social1 = document.getElementById("1.4");
-genero1 = document.getElementById("1.5");
-nombre2 = document.getElementById("2.1");
-edad2 = document.getElementById("2.2");
-email2 = document.getElementById("2.3");
-social2 = document.getElementById("2.4");
-genero2 = document.getElementById("2.5");
-nombre3 = document.getElementById("3.1");
-edad3 = document.getElementById("3.2");
-email3 = document.getElementById("3.3");
-social3 = document.getElementById("3.4");
-genero3 = document.getElementById("3.5");
+                
 
 
 
-for(let i = 0; i< correctemail.length; i++) {
-console.log(correctemail[i].name)
+
+        }
+    }
+
+}}
+createtable(users)
 
 
 
-    nombre1.innerHTML= correctemail[0].name;
-    edad1.innerHTML = correctemail[0].age;
-    email1.innerHTML = correctemail[0].email;
-    social1.innerHTML = correctemail[0].social;
-    genero1.innerHTML = correctemail[0].gender;
-    nombre2.innerHTML = correctemail[1].name;
-    edad2.innerHTML = correctemail[1].age;
-    email2.innerHTML = correctemail[1].email;
-    social2.innerHTML = correctemail[1].social;
-    genero2.innerHTML = correctemail[1].gender;
-    nombre3.innerHTML = correctemail[2].name;
-    edad3.innerHTML = correctemail[2].age;
-    email3.innerHTML = correctemail[2].email;
-    social3.innerHTML = correctemail[2].social;
-    genero3.innerHTML = correctemail[2].gender;
 
-}
+
+
 //probe por columnas y filas y no me funciono ------------------------
 //let array = correctemail;
 //  table = document.getElementById("table");
